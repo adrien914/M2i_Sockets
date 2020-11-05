@@ -24,6 +24,6 @@ class Listener:
     def exchange(self, exchange_socket):
         i = 0
         while self.keep_going:
-            message = b"MSG%d\r\n" % i
+            message = b"MSG%d\n" % i
             exchange_socket.send(message)
             i += 1
